@@ -1,0 +1,6 @@
+[submodule "foreign/autoencoder"]
+	path = foreign/autoencoder
+	url = https://github.com/axkoenig/autoencoder
+[submodule "foreign/torchSR"]
+	path = foreign/torchSR
+	url = https://github.com/Coloquinte/torchSR
