@@ -1,0 +1,16 @@
+{
+  "type": "autoencoder",
+  "num_workers": 0,
+  "image_size": 128,
+  "max_epochs": 10,
+  "batch_size": 64,
+  "train_val_test_split": [70, 20, 10],
+  "nc": 3,
+  "nz": 256,
+  "nfe": 64,
+  "nfd": 64,
+  "lr": 0.0002,
+  "beta1": 0.9,
+  "beta2": 0.999,
+  "gpus": 1
+}

@@ -7,7 +7,7 @@ from io import BytesIO
 from diffusers import LDMSuperResolutionPipeline
 import torch
 
-device = "cuda" if torch.cuda.is_available() else "cpu"
+device = "cpu" # cuda" if torch.cuda.is_available() else "cpu"
 model_id = "CompVis/ldm-super-resolution-4x-openimages"
 
 # load model and scheduler
@@ -20,7 +20,7 @@ def upscale(input_path, output_path):
     image_rgb = Image.fromarray(array_rgb)
 
     # run pipeline in inference (sample random noise and denoise)
-    upscaled_image = pipeline(image_rgb, num_inference_steps=100, eta=1).images[0]
+    upscaled_image = pipeline(image_rgb, num_inference_steps=50, eta=1).images[0]
     # save image
     upscaled_image.save(output_path)
 
